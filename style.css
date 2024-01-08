@@ -2,6 +2,8 @@ body {
   color: #fff;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  position: relative;
+  font-family: "Figtree", sans-serif;
 }
 
 ul {
@@ -15,6 +17,11 @@ ul {
 nav {
   background-color: #f7f7f9;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  position: fixed !important;
+  width: 100%;
+  z-index: 999999;
+
+  transition: all 0.5s ease;
 }
 
 .nav-link {
@@ -903,6 +910,94 @@ footer a {
   white-space: nowrap;
   display: inline-block;
   animation: marqueeAnimation 38s linear infinite;
+}
+
+.popup {
+  position: fixed;
+  background: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  bottom: 10%;
+  right: 5%;
+  padding: 2rem;
+  z-index: 99999;
+  color: #000;
+  width: 280px;
+  height: 450px;
+}
+
+@media (max-width: 992px) {
+  .popup {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 350px;
+  }
+
+  .popup .inputWrapper {
+    width: 100%;
+  }
+
+  .popup .inputWrapper > * {
+    width: 100%;
+    align-items: start;
+  }
+}
+
+.popup .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup #close {
+  position: absolute;
+  top: 5px;
+  right: 12px;
+  color: #9c9c9c;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.popup .content h2 {
+  font-weight: 500;
+  font-size: 35px;
+}
+
+.popup .content p {
+  color: #0b0e16;
+  font-size: 14px;
+  text-align: center;
+}
+
+.popup .content .inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup .content .inputWrapper input {
+  border: 1px solid #3f3e3e73;
+  padding: 10px 20px;
+  border-radius: 0;
+}
+
+.popup .content .inputWrapper button {
+  border-radius: 40px;
+  padding: 10px 70px;
+  border: 0;
+  background: #0b0e16;
+  color: #fff;
+  font-size: 15px;
+}
+
+.popup .content .inputWrapper p {
+  color: #0b0e16;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 @keyframes marqueeAnimation {

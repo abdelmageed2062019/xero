@@ -20,3 +20,22 @@ function toggleNavbar() {
 document.getElementById("toggler").addEventListener("click", toggleNavbar);
 
 AOS.init();
+
+document.getElementById("close").addEventListener("click", function () {
+  document.querySelector(".popup").style.display = "none";
+});
+
+let prevScrollPos = window.pageYOffset;
+const navbar = document.getElementById("navbar");
+
+window.onscroll = function () {
+  const currentScrollPos = window.pageYOffset;
+
+  if (prevScrollPos > currentScrollPos) {
+    navbar.style.top = "0";
+  } else {
+    navbar.style.top = `-${navbar.offsetHeight}px`;
+  }
+
+  prevScrollPos = currentScrollPos;
+};
