@@ -44,7 +44,7 @@
     <section class="header">
       <nav
         id="navbar"
-        class="navbar navbar-expand-lg navbar-light bg-light px-md--5 py-3"
+        class="navbar navbar-expand-lg navbar-light bg-light py-3"
       >
         <a
           class="navbar-brand"
@@ -169,9 +169,6 @@
             data-image-dimensions="4001x2000"
             data-load="false"
             src="https://images.squarespace-cdn.com/content/v1/611c664db64509244506d390/5717132b-f44a-40f4-8758-a35ce597af96/wideproducts.new.transparent.png"
-            width="4001"
-            height="2000"
-            sizes="(max-width: 799px) 200vw, 100vw"
             class="background-image-fx"
             style="display: block; object-position: 50% 50%"
             srcset="
@@ -207,7 +204,7 @@
       </div>
     </section>
 
-    <section class="about text-center text-white">
+    <section class="about text-center text-white py-5">
       <div class="container justify-content-around">
         <div
           class="sub-logo"
@@ -246,7 +243,7 @@
         </h2>
 
         <div
-          class="boxes row"
+          class="boxes row gap-5"
           data-aos="zoom-in"
           data-aos-duration="1000"
           data-aos-easing="ease-in-out"
@@ -267,8 +264,6 @@
                   data-aos-once="true"
                   elementtiming="system-image-block"
                   src="https://images.squarespace-cdn.com/content/v1/611c664db64509244506d390/c7a83556-28a9-4480-bb3d-35f543d45a6f/icon.white.3.png"
-                  width="500"
-                  height="500"
                   sizes="(max-width: 640px) 100vw, (max-width: 767px) 50vw, 16.666666666666664vw"
                   style="
                     display: block;
@@ -289,7 +284,7 @@
                   data-loader="sqs"
                 />
               </div>
-              <h4>Cavity</h4>
+              <h4>Cavity prevention</h4>
               <p>
                 XeroStrip’s main ingredient, xylitol, has been proven to not
                 only stimulate saliva but protect against cavities, keeping your
@@ -311,9 +306,7 @@
                   data-load="false"
                   elementtiming="system-image-block"
                   src="https://images.squarespace-cdn.com/content/v1/611c664db64509244506d390/e713ac6a-c216-492a-9491-29ddc465d305/white.icon.thick.1.png"
-                  width="500"
-                  height="500"
-                  sizes="(max-width: 640px) 100vw, (max-width: 767px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 767px) 50vw, 16.666666666666664vw"
                   style="
                     display: block;
                     object-fit: contain;
@@ -409,8 +402,6 @@
           data-image-dimensions="2158x1214"
           data-load="false"
           src="https://images.squarespace-cdn.com/content/v1/611c664db64509244506d390/caa48caa-52af-42a1-ab81-230f68b4b5c3/sleepmask.jpg"
-          width="2158"
-          height="1214"
           sizes="(max-width: 799px) 200vw, 100vw"
           class="parallax-img"
           srcset="
@@ -472,26 +463,30 @@
             data-aos-once="true"
             data-aos-once="true"
           >
-            <h2 class="my-4">X gonna give it to you.</h2>
-            <p>
-              <strong>XeroStrip™</strong> is an oral lubrication strip. It has a
-              natural adhesive on both sides of the strip so it can be placed
-              and held effortlessly within the mouth. XeroStrip is not gum but
-              has a gummy-like consistency. Its flavor is mild winter green. It
-              is sweet-like and gooey once it begins to dissolve. Gooey is good!
-              You can sleep, talk, drink, and even eat easily with the strip in
-              place. Providing your mouth with an oral lubricant all night long!
-            </p>
-            <p>
-              <strong>Xylitol</strong> is XeroStrip’s active main ingredient.
-              Xylitol is a natural sweetener found in plants. It stimulates your
-              salivary glands while reducing levels of tooth-decaying bacteria.
-              <strong> Wow. Yeah, also very cool.</strong>
-            </p>
+            <div class="x-text ml-5 py-5">
+              <h2 class="my-5">X gonna give it to you.</h2>
+              <p>
+                <strong>XeroStrip™</strong> is an oral lubrication strip. It has
+                a natural adhesive on both sides of the strip so it can be
+                placed and held effortlessly within the mouth. XeroStrip is not
+                gum but has a gummy-like consistency. Its flavor is mild winter
+                green. It is sweet-like and gooey once it begins to dissolve.
+                Gooey is good! You can sleep, talk, drink, and even eat easily
+                with the strip in place. Providing your mouth with an oral
+                lubricant all night long!
+              </p>
+              <p>
+                <strong>Xylitol</strong> is XeroStrip’s active main ingredient.
+                Xylitol is a natural sweetener found in plants. It stimulates
+                your salivary glands while reducing levels of tooth-decaying
+                bacteria.
+                <strong> Wow. Yeah, also very cool.</strong>
+              </p>
 
-            <strong class="last"
-              >XEROSTRIP + XYLITOL = XTRAORDINARY XPERIENCE</strong
-            >
+              <strong class="last"
+                >XEROSTRIP + XYLITOL = XTRAORDINARY XPERIENCE</strong
+              >
+            </div>
           </div>
         </div>
         <div class="row justify-content-center my-4">
@@ -678,9 +673,22 @@
         <div class="row text-center">
           <div class="col-md-8">
             <h2 class="my-5" data-aos="zoom-in" data-aos-once="true">
-              More doesn’t mean better, better means better.
+              More doesn’t mean better,
+              <span class="better-svg-text">
+                better
+                <svg class="better-svg">
+                  <path
+                    d="M 0,51.92 c 10.95,-0.26550000000000296 51.1,-1.9470000000000027 73,-1.7700000000000031 c 21.900000000000006,0.1769999999999996 70.81,2.950000000000003 73,2.950000000000003 c 2.1899999999999977,0 -38.69,-3.3925000000000054 -58.400000000000006,-2.950000000000003 c -19.710000000000008,0.44250000000000256 -70.81,5.192 -73,5.899999999999999 c -2.1899999999999977,0.7079999999999984 43.07,-1.1799999999999926 58.4,-1.1799999999999926 c 15.329999999999998,0 43.80000000000001,0.5604999999999905 43.80000000000001,1.1799999999999926 c 0,0.6195000000000022 -32.85000000000001,2.5075000000000003 -43.80000000000001,2.950000000000003 c -10.950000000000003,0.44250000000000256 -24.82,0 -29.200000000000003,0"
+                    vector-effect="non-scaling-stroke"
+                    stroke-dasharray="454"
+                    stroke-dashoffset="908"
+                  ></path>
+                </svg>
+              </span>
+
+              means better.
             </h2>
-            <p class="fw-bold" data-aos="zoom-in" data-aos-once="true">
+            <p data-aos="zoom-in" data-aos-once="true">
               JUST ONE XEROSTRIP™ LASTS UP TO 3X LONGER COMPARED TO
               ALTERNATIVES.
             </p>
@@ -693,6 +701,7 @@
 
       <div class="backImg">
         <img
+          id="thumbnail"
           alt=""
           data-image-focal-point="0.5,0.5"
           crossorigin=""
@@ -701,8 +710,6 @@
           data-image-dimensions="2560x1200"
           data-load="false"
           src="https://images.squarespace-cdn.com/content/v1/611c664db64509244506d390/489cf9b3-6178-43fd-bac0-e390acfac4b0/backround.green.website.jpg"
-          width="2560"
-          height="1200"
           sizes="(max-width: 799px) 200vw, 100vw"
           class="background-image-fx parallex-img-2"
           style="display: block; object-position: 50% 50%"
@@ -723,9 +730,10 @@
       </div>
     </section>
 
-    <section class="features-sec">
+    <section class="features-sec py-5">
       <h2 data-aos="zoom-in" data-aos-once="true" data-aos-delay="100">
-        Leave dry mouth behind!
+        Leave dry mouth
+        <span class="d-block">behind!</span>
       </h2>
 
       <div class="container">
@@ -1080,8 +1088,8 @@
         </div>
 
         <div class="row justify-content-between border-top mt-4 mb-5 mx-3">
-          <p>© 2023 XeroStrip™, Inc. All rights reserved</p>
-          <a href="#">Privacy Policy</a>
+          <p class="pt-3">© 2023 XeroStrip™, Inc. All rights reserved</p>
+          <a href="#" class="pt-3">Privacy Policy</a>
         </div>
       </div>
     </footer>

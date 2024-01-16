@@ -6,8 +6,26 @@ body {
   font-family: "Figtree", sans-serif;
 }
 
+::-moz-selection {
+  /* Code for Firefox */
+  background: #0edd84;
+}
+
+::selection {
+  background: #0edd84;
+}
+
 ul {
   list-style: none;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+button:hover {
+  opacity: 0.8 !important;
 }
 
 .navbar-brand img {
@@ -20,7 +38,7 @@ nav {
   position: fixed !important;
   width: 100%;
   z-index: 999999;
-
+  padding: 0 3rem !important;
   transition: all 0.5s ease;
 }
 
@@ -131,6 +149,7 @@ nav .btn {
 .header .content h2 {
   color: #ffffff;
   font-size: 4.5rem;
+  font-weight: bold;
   line-height: 84px;
   letter-spacing: 3.2px;
   margin-bottom: 2rem;
@@ -141,6 +160,7 @@ nav .btn {
   font-size: 3rem;
   line-height: 56px;
   letter-spacing: 2px;
+  font-weight: bold;
 }
 
 .header .content h3 span {
@@ -180,7 +200,7 @@ path {
 
 .product {
   position: relative;
-  min-height: 800px;
+  min-height: 750px;
 }
 
 .product .product-text {
@@ -188,7 +208,7 @@ path {
 }
 
 .product .product-text h4 {
-  font-size: 17.6px;
+  font-size: 1.28rem;
   line-height: 24.64px;
   letter-spacing: -0.08px;
   color: #0b0e16;
@@ -196,31 +216,34 @@ path {
 }
 
 .product .product-text h2 {
-  font-size: 40px;
+  font-size: 2.75rem;
   line-height: 56.4px;
   letter-spacing: 2px;
   margin-bottom: 2rem;
   color: #0b0e16;
+  font-weight: 600;
 }
 
 .product .img-wrapper {
   position: absolute;
-  bottom: -5rem;
+  bottom: -10rem;
   left: 0;
   right: 0;
   z-index: -1;
+  overflow: hidden;
+}
+
+.product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1.7;
 }
 
 @media screen and (max-width: 768px) {
   .product .img-wrapper {
     bottom: 0;
   }
-}
-
-.product img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 
 .video {
@@ -263,7 +286,7 @@ video {
 }
 
 .about .about-p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
   margin: 65px;
 }
@@ -272,27 +295,52 @@ video {
   padding-bottom: 120px;
 }
 
-.box .box-img {
-  margin: 100px 0 80px 0;
+.about h2 {
+  font-weight: 600;
 }
 
-.box:not(:last-child) {
-  padding: 70px;
+.box {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.box .box-img {
+  margin: 100px 0 60px 0;
 }
 
 .box img {
-  width: 55%;
+  width: 80%;
   height: 100%;
   margin: 0 auto;
 }
 
 .box p {
-  font-weight: 500;
+  font-weight: bold;
+  width: 80%;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.box h4 {
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .buy-now {
   position: relative;
-  min-height: 500px;
+  min-height: 600px;
+}
+
+.buy-now p {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.buy-now h2 {
+  font-size: 4.5rem;
+  font-weight: 600;
 }
 
 .buy-now .backImg {
@@ -304,8 +352,9 @@ video {
 }
 
 .buy-now .backImg img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 824px;
+  object-position: 0px -90px;
 }
 
 .buy-now .buy-btn {
@@ -322,32 +371,39 @@ video {
 }
 
 .gonna h2 {
-  font-size: 51.2px;
+  font-size: 3.8rem;
   font-style: normal;
   font-variant: normal;
-  font-weight: 500;
-  letter-spacing: 2.56px;
+  font-weight: 600;
+  letter-spacing: -1.44px;
   line-height: 51.2px;
-  width: 100%;
 }
 
 .gonna p {
   font-weight: 500;
-  line-height: 22px;
+  line-height: 19px;
+  font-size: 1.1rem;
+  width: 90%;
+}
+
+.gonna strong {
+  font-weight: bolder;
+  font-size: 1.2rem;
 }
 
 .gonna button {
   background: #0b0e16;
   color: #fff;
-  padding: 20px 50px;
+  padding: 22px 72px;
   border: none;
   border-radius: 40px;
+  font-size: 0.8rem;
 }
 
 .grid-images {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-gap: 1px;
 }
 
@@ -374,9 +430,9 @@ video {
 }
 
 .img3 {
-  grid-area: 3 / 6 / 4 / 7;
+  grid-area: 2 / 6 / 2 / 6;
   width: 100%;
-  max-width: 389px;
+  max-width: 400px;
   height: auto;
 }
 
@@ -394,15 +450,15 @@ video {
   }
 
   .img1 {
-    grid-area: 2 / 1 / 3 / 4;
+    max-width: 100%;
   }
 
   .img2 {
-    grid-area: 1 / 4 / 3 / 7;
+    max-width: 100%;
   }
 
   .img3 {
-    grid-area: 3 / 6 / 4 / 8;
+    max-width: 100%;
   }
 }
 
@@ -415,11 +471,10 @@ video {
 }
 
 .texts h2 {
-  font-size: 50px;
-  font-weight: 500;
-  letter-spacing: 2px;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
   color: rgb(11, 14, 22);
-  width: 100%;
   margin-block: 30px;
 }
 
@@ -428,10 +483,10 @@ video {
 }
 
 .gif {
-  width: 30%;
+  width: 25%;
   background: #6e83db;
   border-radius: 30px;
-  margin: 50px 0;
+  margin: 80px 0;
 }
 
 @media (max-width: 768px) {
@@ -446,7 +501,8 @@ video {
 }
 
 .gifText p {
-  font-size: 24px;
+  font-size: 1.2rem;
+  font-weight: 600;
   letter-spacing: 0;
 }
 
@@ -458,7 +514,7 @@ video {
   border-radius: 30px;
 }
 .features .img-fluid {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
 }
 
@@ -473,8 +529,9 @@ video {
 .features-sec h2 {
   color: #0b0e16;
   text-align: center;
-  font-size: 3rem;
+  font-size: 4.8rem;
   margin-block: 3rem;
+  font-weight: 600;
 }
 
 .features .div1 {
@@ -525,16 +582,22 @@ video {
 }
 .more {
   position: relative;
-  min-height: 80vh;
+  min-height: 70vh;
 }
 
 .more h2 {
-  font-size: 51.2px;
+  font-size: 3.1rem;
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
   letter-spacing: 2.56px;
   line-height: 51.2px;
+}
+
+.more p {
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
 }
 
 .more .backImg {
@@ -571,7 +634,7 @@ video {
   color: #0b0e16;
 }
 .features h2 {
-  font-size: 4rem;
+  font-size: 5rem;
   width: 30%;
   margin: 100px auto;
 }
@@ -617,10 +680,15 @@ video {
   background-color: #0b0e16;
   position: relative;
   height: 90vh;
+  z-index: 1;
 }
 
 .patient h2 {
-  font-size: 70px;
+  font-size: 5rem;
+}
+
+.patient .content {
+  z-index: 999;
 }
 
 .patient .patient-btn {
@@ -628,7 +696,7 @@ video {
   border-radius: 300px;
   background-color: #f7f7f9;
   font-size: 0.9rem;
-  padding: 20px 70px;
+  padding: 25px 70px;
   margin-top: 100px;
 }
 
@@ -636,9 +704,11 @@ video {
   position: absolute;
   top: 0;
   right: 0;
-  opacity: 0.4;
+  opacity: 0.6;
   height: 100%;
   width: 100%;
+  overflow: hidden;
+  z-index: -1;
 }
 
 .patient .layer img {
@@ -652,8 +722,9 @@ video {
 }
 
 .plunge h2 {
-  font-size: 70px;
-  font-weight: 800;
+  font-size: 5rem;
+  width: 80%;
+  font-weight: 600;
   text-align: end;
 }
 
@@ -662,13 +733,13 @@ video {
   border-radius: 300px;
   background-color: #0b0e16;
   font-size: 0.9rem;
-  padding: 20px 70px;
-  margin-top: 60px;
+  padding: 25px 50px;
+  margin-top: 2px;
   color: #fff;
 }
 
 .plunge img {
-  width: 100%;
+  width: 85%;
   border-radius: 30px;
 }
 
@@ -684,8 +755,8 @@ video {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  border-radius: 30px;
-  padding: 40px;
+  border-radius: 15px;
+  padding: 25px;
 }
 
 .form-wrapper img {
@@ -747,9 +818,9 @@ footer {
 .form-sec button {
   background: #0edd84;
   color: #fff;
-  padding: 1rem !important;
+  padding: 0.6rem 0.7rem !important;
   border: 0;
-  border-radius: 18px;
+  border-radius: 30px;
   font-size: 1rem !important;
   font-weight: bold;
 }
@@ -772,7 +843,9 @@ footer ul {
 }
 
 footer h4 {
-  font-size: 14px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.2;
 }
 
 footer li {
@@ -782,14 +855,22 @@ footer li {
 }
 
 footer p {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 11px;
+  font-weight: 600;
 }
 
 footer a {
   font-size: 12px;
   font-weight: 500;
   color: #0b0e16;
+  border-bottom: 1px solid rgba(11, 14, 22, 0.3);
+  height: 35px;
+  transition: all 0.4s ease;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: rgba(11, 14, 22, 0.3);
 }
 
 .container {
@@ -818,10 +899,10 @@ footer a {
     width: 60%;
   }
 
-  .buy-now .simpleParallax {
+  /* .buy-now .simpleParallax {
     width: 130%;
     height: 100%;
-  }
+  } */
 
   .buy-now .container {
     margin-block: 3rem;
@@ -854,10 +935,6 @@ footer a {
 
   .more h2 {
     font-size: 2.4rem;
-  }
-
-  .patient h2 {
-    font-size: 3.4rem;
   }
 
   .plunge h2 {
@@ -1016,4 +1093,22 @@ footer a {
   .marquee span {
     font-size: 50px;
   }
+}
+
+.better-svg-text {
+  position: relative;
+}
+
+.better-svg {
+  position: absolute;
+  display: block;
+  top: 32px;
+  left: 81px;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  stroke-width: max(1px, 0.5em);
+  stroke-linecap: square;
+  stroke-linejoin: bevel;
+  fill: none;
 }

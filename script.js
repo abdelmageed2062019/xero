@@ -1,6 +1,8 @@
 var image = document.getElementsByClassName("parallax-img");
 new simpleParallax(image, {
   orientation: "left",
+  delay: 0.6,
+  maxTransition: 60,
 });
 
 var image = document.getElementsByClassName("parallex-img-3");
@@ -10,7 +12,9 @@ new simpleParallax(image, {
 });
 
 var image = document.getElementsByClassName("parallex-img-2");
-new simpleParallax(image);
+new simpleParallax(image, {
+  delay: 0.6,
+});
 
 function toggleNavbar() {
   let body = document.body;
